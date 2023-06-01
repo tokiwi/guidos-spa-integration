@@ -1,9 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
     app: {
         head: {
-            script: [{ children: "https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js" }],
+
+            script: [{ src: '//libraries.guidos.fun/highlight-vs/static/js/main.js', defer: true }],
         },
+    },
+    vite: {
+        define: { 'process.env.DEBUG': false },
     },
 })
